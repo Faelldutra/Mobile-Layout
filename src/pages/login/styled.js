@@ -27,6 +27,7 @@ export const Header = styled.header`
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 
     img {
       height: 700px;
@@ -105,6 +106,7 @@ label{
       outline: 0px;
       padding-left: 60px;
       border: 0px solid black; 
+      width: 100%;
   }
   svg{
     width: 45px;
@@ -155,7 +157,18 @@ export const CheckBox = styled.div`
       font-size: 2.5rem;
       color: #D4CCFF;
       font-family: "Montserrat", sans-serif;
+
+      @media(max-width: 900px){
+        font-size: 2rem;
+      }   
+      
+      @media(max-width: 750px){
+        font-size: 1.5rem;  
       }
+      @media(max-width: 570px){
+        font-size: 1.2rem;  
+      }
+    }  
   
   .checkbox{
     display: flex;
@@ -167,19 +180,29 @@ export const CheckBox = styled.div`
           color: #D4CCFF;
           margin-left: 50px;
           font-family: "Montserrat", sans-serif;
+
+          @media(max-width: 900px){
+            font-size: 2rem;
+          }
+          @media(max-width: 750px){
+            font-size: 1.5rem;
+          }
+          @media(max-width: 570px){
+            font-size: 1.2rem;  
+          }   
       }
+
       input{
           border-radius: 10px;   
       }
       input[type=checkbox] {
-      transform: scale(4);
-      
+      transform: scale(4);  
       }
       p{
           font-size: 2.5rem;
           color: #D4CCFF;
-          font-family: "Montserrat", sans-serif;
-      }
+          font-family: "Montserrat", sans-serif;   
+      }     
     }  
   }
    .button{
